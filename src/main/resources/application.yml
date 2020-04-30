@@ -1,0 +1,14 @@
+server:
+  port: 8080
+   
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/contact_db
+    username: root
+    password: rootroot
+  jpa:
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+    database-platform: org.hibernate.dialect.MySQLDialect

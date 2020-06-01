@@ -11,6 +11,7 @@ import com.pokhara.services.ContactService;
 
 import javassist.NotFoundException;
 
+@CrossOrigin(origins = {"http://localhost:8080/", "http://localhost:4200"})
 @RestController
 @RequestMapping("/v2")
 public class ContactController {
@@ -20,8 +21,7 @@ public class ContactController {
 
 	@PostMapping("/contacts")
 	public void createContactInfo(@RequestBody ContactDto contactDto) {
-		contactService.createContact(contactDto);
-
+			contactService.createContact(contactDto);
 	}
 
 	@GetMapping("/contacts/")

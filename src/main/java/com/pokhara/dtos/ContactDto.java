@@ -8,6 +8,8 @@ public class ContactDto {
 	private AddressDto address;
 	private List<PhoneDto> phone;
 	private String email;
+	
+	
 	public NameDto getName() {
 		return name;
 	}

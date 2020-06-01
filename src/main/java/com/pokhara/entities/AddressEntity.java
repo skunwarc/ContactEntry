@@ -11,7 +11,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
+@Getter
+@Setter
 @Table(name = "address")
 public class AddressEntity {
 	
@@ -35,53 +40,53 @@ public class AddressEntity {
 	@JoinColumn(name = "contact_id")
 	private ContactEntity contactEntity;
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getStreet() {
-		return street;
-	}
-
-	public void setStreet(String street) {
-		this.street = street;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public String getState() {
-		return state;
-	}
-
-	public void setState(String state) {
-		this.state = state;
-	}
-
-	public String getZip() {
-		return zip;
-	}
-
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
-
-	public ContactEntity getContactEntity() {
-		return contactEntity;
-	}
-
-	public void setContactEntity(ContactEntity contactEntity) {
-		this.contactEntity = contactEntity;
-	}
+//	public int getId() {
+//		return id;
+//	}
+//
+//	public void setId(int id) {
+//		this.id = id;
+//	}
+//
+//	public String getStreet() {
+//		return street;
+//	}
+//
+//	public void setStreet(String street) {
+//		this.street = street;
+//	}
+//
+//	public String getCity() {
+//		return city;
+//	}
+//
+//	public void setCity(String city) {
+//		this.city = city;
+//	}
+//
+//	public String getState() {
+//		return state;
+//	}
+//
+//	public void setState(String state) {
+//		this.state = state;
+//	}
+//
+//	public String getZip() {
+//		return zip;
+//	}
+//
+//	public void setZip(String zip) {
+//		this.zip = zip;
+//	}
+//
+//	public ContactEntity getContactEntity() {
+//		return contactEntity;
+//	}
+//
+//	public void setContactEntity(ContactEntity contactEntity) {
+//		this.contactEntity = contactEntity;
+//	}
 
 
 }

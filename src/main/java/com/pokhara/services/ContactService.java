@@ -23,6 +23,10 @@ public class ContactService {
 
 	@Autowired
 	private ContactRepository contactRepository;
+	
+//	public ContactService(@Autowired ContactRepository contactRepository) {
+//		this.contactRepository = contactRepository;
+//	}
 
 	public void createContact(ContactDto dto) {
 		ContactEntity contactEntity = new ContactEntity();

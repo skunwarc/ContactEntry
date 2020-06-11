@@ -114,10 +114,10 @@ public class ContactService {
 	}
 
 	public void updateContactById(int id, ContactDto contactDto) {
-		Optional<ContactEntity> entities = contactRepository.findById(id);
-		ContactEntity contactEntity = null;
-		if (entities.isPresent()) {
-			contactEntity = entities.get();
+		ContactEntity contactEntity = contactRepository.findById(id).orElseThrow(()-> new  RuntimeException("Your are trying to uodate id not present."));
+		//ContactEntity contactEntity = null;
+		//if (entities.isPresent()) {
+			//contactEntity = entities.get();
 			NameDto nameDto = contactDto.getName();
 			NameEntity nameEntity = new NameEntity();
 			nameEntity.setFirst(nameDto.getFirst());
@@ -152,7 +152,7 @@ public class ContactService {
 			contactEntity.setPhoneEntity(phoneEntities);
 			contactEntity.setEmail(contactDto.getEmail());
 
-		}
+		//}
 		contactRepository.save(contactEntity);
 	}
 

@@ -17,7 +17,7 @@ import javassist.NotFoundException;
 public class ContactController {
 
 	@Autowired
-	ContactService contactService;
+	private ContactService contactService;
 
 	@PostMapping("/contacts")
 	public void createContactInfo(@RequestBody ContactDto contactDto) {
